@@ -31,15 +31,15 @@ var mainCart = new CartMan({
 
 ## Селекторы
 
-`data-item-total-price` - общая сумма товаров позиции
-
-`data-item-count` - счетчик позиции
+`data-items-count` - счетчик кол-ва товаров
 
 `data-items-price` - Сумма с учетом скидки без учета доставки
 
 `data-total-price` - Сумма с учетом скидки и с учетом доставки
 
-`data-items-count` - счетчик кол-ва товаров
+`data-item-total-price` - сумма позиции товара (Обязательно должно быть внутри data-item-id) 
+
+`data-item-count` - счетчик позиции
 
 `data-items-text` - текстовый блок счетчика кол-ва товаров
 

@@ -1,5 +1,5 @@
 /*!
- * CartMan v0.2.5
+ * CartMan v0.2.6
  * Vladimir Ivanin
  * 2018
  */

@@ -11,8 +11,12 @@ function deleteItems(options, cart) {
     return false;
   }
 
-  var $button = cart.action.button;
-  var $cartItem = $button.parents(item + ':first');
+  var ignoreItems = [];
+  $.each(Cart.order.order_lines, function(index, el) {
+    ignoreItems.push(getDataAttrName(system.selectors.item, el.id))
+  });
+
+  var $cartItem = $(item).not(ignoreItems.join(','));
 
   $cartItem.addClass(system.classes.removed);
 

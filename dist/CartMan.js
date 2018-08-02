@@ -1,5 +1,5 @@
 /*!
- * CartMan v0.2.6
+ * CartMan v0.2.7
  * Vladimir Ivanin
  * 2018
  */
@@ -20,5 +20,5 @@ var getDataAttrName=require("./help").getDataAttrName,declinationText=require(".
 },{"../variables":9,"./help":3}],8:[function(require,module,exports){
 window.CartMan=require("CartMan");
 },{"CartMan":4}],9:[function(require,module,exports){
-var defaults={declination:["товар","товара","товаров"],hideCartItems:!0,counterTemplate:"(%c%)",counterTemplateEmpty:null,positionsTemplate:"(%c%)",positionsTemplateEmpty:null,counterItemsText:"В вашей корзине %c%&nbsp;%w%",counterItemsTextEmpty:"В вашей корзине %c%&nbsp;%w%",counterPositionText:"В вашей корзине %c%&nbsp;%w%",counterPositionTextEmpty:"В вашей корзине %c%&nbsp;%w%",updateItems:function(){},deleteItems:function(){}},system={selectors:{quantity:"quantity",item:"item-id",item_delete:"item-delete",item_total_price:"item-total-price",item_count:"item-count",items_price:"items-price",total_price:"total-price",items_count:"items-count",positions_count:"positions-count",items_count_words:"items-text",positions_count_words:"positions-text",discounts:"discounts"},classes:{init:"is-cart-init",removed:"is-removed",empty:"is-cart-empty"},item_class:{one:"is-one",moreOne:"more-than-one",moreNine:"more-than-nine"}};module.exports={defaults:defaults,system:system};
+var defaults={declination:["товар","товара","товаров"],hideCartItems:!0,counterTemplate:"(%c%)",counterTemplateEmpty:null,positionsTemplate:"(%c%)",positionsTemplateEmpty:null,counterItemsText:"В вашей корзине %c%&nbsp;%w%",counterItemsTextEmpty:"В вашей корзине %c%&nbsp;%w%",counterPositionText:"В вашей корзине %c%&nbsp;%w%",counterPositionTextEmpty:"В вашей корзине %c%&nbsp;%w%",updateItems:function(){},deleteItems:function(){}},system={selectors:{quantity:"cartman-quantity",item:"cartman-item-id",item_delete:"cartman-item-delete",item_total_price:"cartman-item-total-price",item_count:"cartman-item-count",items_price:"cartman-items-price",total_price:"cartman-total-price",items_count:"cartman-items-count",positions_count:"cartman-positions-count",items_count_words:"cartman-items-text",positions_count_words:"cartman-positions-text",discounts:"cartman-discounts"},classes:{init:"is-cart-init",removed:"is-removed",empty:"is-cart-empty"},item_class:{one:"is-one",moreOne:"more-than-one",moreNine:"more-than-nine"}};module.exports={defaults:defaults,system:system};
 },{}]},{},[8]);

@@ -1,6 +1,6 @@
 {
   "name": "CartMan",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Плагин для работы корзины на платформе InSales",
   "main": "dist/CartMan.js",
   "scripts": {

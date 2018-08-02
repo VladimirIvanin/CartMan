@@ -15,18 +15,18 @@ var defaults = {
 
 var system = {
   selectors: {
-    quantity: 'quantity',
-    item: 'item-id',
-    item_delete: 'item-delete',
-    item_total_price: 'item-total-price',
-    item_count: 'item-count',
-    items_price: 'items-price',
-    total_price: 'total-price',
-    items_count: 'items-count',
-    positions_count: 'positions-count',
-    items_count_words: 'items-text',
-    positions_count_words: 'positions-text',
-    discounts: 'discounts'
+    quantity: 'cartman-quantity',
+    item: 'cartman-item-id',
+    item_delete: 'cartman-item-delete',
+    item_total_price: 'cartman-item-total-price',
+    item_count: 'cartman-item-count',
+    items_price: 'cartman-items-price',
+    total_price: 'cartman-total-price',
+    items_count: 'cartman-items-count',
+    positions_count: 'cartman-positions-count',
+    items_count_words: 'cartman-items-text',
+    positions_count_words: 'cartman-positions-text',
+    discounts: 'cartman-discounts'
   },
   classes: {
     init: 'is-cart-init',

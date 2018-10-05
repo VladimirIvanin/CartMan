@@ -1,5 +1,6 @@
 /*!
  * CartMan v0.2.8
+ * https://github.com/VladimirIvanin/CartMan
  * Vladimir Ivanin
  * 2018
  */

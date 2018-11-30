@@ -16,7 +16,7 @@ var mainCart = new CartMan({
 {
   declination: ['товар', 'товара', 'товаров'],
   hideCartItems: true,
-  counterTemplate: '(%c%)', // regexp %c% (%c% - counter)
+  counterTemplate: '(%c%)', // Шаблон счетчика. regexp %c% (%c% - counter)
   counterTemplateEmpty: null, // regexp %c%
   positionsTemplate: '(%c%)', // regexp %c% (%c% - counter)
   positionsTemplateEmpty: null, // regexp %c%

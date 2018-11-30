@@ -18,8 +18,17 @@ var CartMan = function (options) {
   }else{
     self.init();
   }
-
-  return self;
 };
 
-module.exports = CartMan;
+CartMan.getInstance = function (options) {
+  if (this.instance == null) {
+    this.instance = new CartMan(options);
+  }else{
+    console.warn('CartMan уже объявлен, оставьте один "new CartMan"');
+  }
+  return this.instance;
+}
+
+module.exports = function (options) {
+  return CartMan.getInstance(options);
+};

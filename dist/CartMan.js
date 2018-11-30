@@ -1,5 +1,5 @@
 /*!
- * CartMan v0.2.8
+ * CartMan v0.2.9
  * Vladimir Ivanin
  * 2018
  */
@@ -10,7 +10,7 @@ var getDataAttrName=require("./help").getDataAttrName,system=require("../variabl
 },{"../variables":9,"./help":3}],3:[function(require,module,exports){
 function getDataAttrName(t,e){return"[data-"+(e?t+'="'+e+'"':t)+"]"}var declinationText=function(t,e){var a=["товар","товара","товаров"];e&&(a=e);return a[t%100>4&&t%100<20?2:[2,0,1,1,1,2][t%10<5?t%10:5]]};function getTemplate(t,e){return t&&"string"==typeof t||(t=""),$.each(e,function(e,a){t=t.replace(a.reg,a.data)}),t}module.exports={getDataAttrName:getDataAttrName,getTemplate:getTemplate,declinationText:declinationText};
 },{}],4:[function(require,module,exports){
-var defaults=require("../variables").defaults,init=require("./init"),CartMan=function(t){return this.state={cart_is_init:!1},this.options=$.extend(!0,{},defaults,t),this.init=init,EventBus?this.init():console.warn("Не подключен common.js"),this};module.exports=CartMan;
+var defaults=require("../variables").defaults,init=require("./init"),CartMan=function(n){this.state={cart_is_init:!1},this.options=$.extend(!0,{},defaults,n),this.init=init,EventBus?this.init():console.warn("Не подключен common.js")};CartMan.getInstance=function(n){return null==this.instance?this.instance=new CartMan(n):console.warn('CartMan уже объявлен, оставьте один "new CartMan"'),this.instance},module.exports=function(n){return CartMan.getInstance(n)};
 },{"../variables":9,"./init":5}],5:[function(require,module,exports){
 var updateClasses=require("./updateClasses"),updateDiscounts=require("./discounts"),deleteItems=require("./deleteItems"),updateData=require("./updateData");function init(){var e=this,t=e.options;EventBus.subscribe("delete_items:insales:cart",function(e){deleteItems(t,e),t.deleteItems(e)}),EventBus.subscribe("update_items:insales:cart",function(s){updateData(t,s),updateDiscounts(e.state.cart_is_init),updateClasses(s),t.updateItems(s),e.state.cart_is_init=!0})}module.exports=init;
 },{"./deleteItems":1,"./discounts":2,"./updateClasses":6,"./updateData":7}],6:[function(require,module,exports){

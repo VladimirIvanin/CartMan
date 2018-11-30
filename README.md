@@ -4,16 +4,6 @@
 
 ```js
 var mainCart = new CartMan({
-  updateItems: function (cart) {
-    console.log('Корзина: ', cart);
-  }
-});
-```
-
-## Настройки
-
-```js
-{
   declination: ['товар', 'товара', 'товаров'],
   hideCartItems: true,
   counterTemplate: '(%c%)', // Шаблон счетчика. regexp %c% (%c% - counter)
@@ -24,9 +14,13 @@ var mainCart = new CartMan({
   counterItemsTextEmpty: 'В вашей корзине %c%&nbsp;%w%', // regexp %c%,%w% (%c% - counter, %w% - word)
   counterPositionText: 'В вашей корзине %c%&nbsp;%w%', // regexp %c%,%w% (%c% - counter, %w% - word)
   counterPositionTextEmpty: 'В вашей корзине %c%&nbsp;%w%', // regexp %c%,%w% (%c% - counter, %w% - word)
-  updateItems: function () {},
-  deleteItems: function () {}
-}
+  updateItems: function (cart) {
+    console.log('Корзина: ', cart);
+  },
+  deleteItems: function (cart) {
+    console.log('Корзина: ', cart);
+  }
+});
 ```
 
 ## Селекторы

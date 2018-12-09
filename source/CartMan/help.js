@@ -17,6 +17,29 @@ var declinationText = function (day, titles) {
   return _titles[ (day % 100 > 4 && day % 100 < 20) ? 2 : cases[(day % 10 < 5) ? day % 10 : 5]];
 };
 
+
+function patchNumber (num) {
+  var isString = typeof num == 'string';
+  var isNumber = typeof num == 'number';
+  
+  if (!isNumber && !isString) {
+    return 0;
+  }
+
+  if(isString){
+    num = num.replace(/\s/g, '');
+    num = num.replace(/,/g, '.');
+    num = num.replace(/px/g, '');
+    num = (isNaN(+num)) ? 1 : +num;
+  }
+
+  function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+  }
+  
+  return Number( (isFloat(num)) ? num.toFixed(2) : num );
+}
+
 // замена символов
 /**
   getTemplate('В вашей корзине %c% %w%', [{
@@ -43,5 +66,6 @@ function getTemplate(template, data) {
 module.exports = {
   getDataAttrName: getDataAttrName,
   getTemplate: getTemplate,
-  declinationText: declinationText
+  declinationText: declinationText,
+  patchNumber: patchNumber
 };

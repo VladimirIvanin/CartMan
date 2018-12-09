@@ -2,6 +2,7 @@
 
 var getDataAttrName = require('./help').getDataAttrName;
 var declinationText = require('./help').declinationText;
+var patchNumber = require('./help').patchNumber;
 var getTemplate = require('./help').getTemplate;
 var system = require('../variables').system;
 
@@ -11,7 +12,7 @@ function updateData(options, cart) {
 
   updateItemTotal(cart.order_lines);
 
-  updateTotalPrice(Math.round(cart.total_price), Math.round(cart.items_price));
+  updateTotalPrice(cart.total_price, cart.items_price);
 
 }
 
@@ -76,8 +77,8 @@ function updateTotalPrice(_totalPrice, _items_price) {
   var $total_price = $(getDataAttrName(system.selectors.total_price));
   var $items_price = $(getDataAttrName(system.selectors.items_price));
 
-  $total_price.html( Shop.money.format( Math.round(_totalPrice) ) );
-  $items_price.html( Shop.money.format( Math.round(_items_price) ) );
+  $total_price.html( Shop.money.format( patchNumber(_totalPrice) ) );
+  $items_price.html( Shop.money.format( patchNumber(_items_price) ) );
 }
 
 // Обновление цен у позиций корзины
@@ -86,7 +87,7 @@ function updateItemTotal(order_lines) {
   _.forEach(order_lines, function (item) {
     var $item = $('[data-item-id="'+item.variant_id+'"]');
     $item.each(function(index, el) {
-      $(el).find(getDataAttrName(system.selectors.item_total_price)).html( Shop.money.format( Math.round(item.total_price) ) );
+      $(el).find(getDataAttrName(system.selectors.item_total_price)).html( Shop.money.format( patchNumber(item.total_price) ) );
       $(el).find(getDataAttrName(system.selectors.item_count)).html( item.quantity );
 
       if (item.quantity == 1) {

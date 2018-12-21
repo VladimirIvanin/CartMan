@@ -16,7 +16,7 @@ var defaults = {
 var system = {
   selectors: {
     quantity: 'cartman-quantity',
-    item: 'cartman-item-id',
+    item: 'item-id',
     item_delete: 'cartman-item-delete',
     item_total_price: 'cartman-item-total-price',
     item_count: 'cartman-item-count',

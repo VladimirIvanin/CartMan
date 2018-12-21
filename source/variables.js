@@ -17,7 +17,7 @@ var system = {
   selectors: {
     quantity: 'cartman-quantity',
     item: 'item-id',
-    item_delete: 'cartman-item-delete',
+    item_delete: 'item-delete',
     item_total_price: 'cartman-item-total-price',
     item_count: 'cartman-item-count',
     items_price: 'cartman-items-price',

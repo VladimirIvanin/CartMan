@@ -9,7 +9,7 @@ bfPlugins:
       template: "<%= pkg.name %> v<%= pkg.version %>\n<%= pkg.author.name %>\n<%= moment().year() %>"
       pkg:
         name: 'CartMan'
-        version: '0.2.12'
+        version: '0.2.13'
         author:
           name: 'Vladimir Ivanin'
 

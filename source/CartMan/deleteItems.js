@@ -11,7 +11,7 @@ function deleteItems(options, cart) {
     return false;
   }
 
-  var ignoreItems = [];
+  var ignoreItems = ['[data-widget-id]'];
   $.each(Cart.order.order_lines, function(index, el) {
     ignoreItems.push(getDataAttrName(system.selectors.item, el.id))
   });
